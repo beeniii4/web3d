@@ -1,0 +1,61 @@
+<html>
+  <head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+  <a-scene cursor="rayOrigin: mouse">
+        <a-assets>
+          <img id="fons" src="ChatGPT Image 12 de gen. del 2026, 15_23_00.png" />
+          <img id="texturaterra" src="green-grass-background-top-view-600nw-2567079377.webp" />
+          <img id="guernica" src="YCZHX52SGFFG3OB4C2T6FJJ77Y.jpg" />        
+          <img id="cara" src="Logo Malaga CF.png" />            
+          <img id="bicicletes" src="557671.jpeg" />
+          <img id="bicho" src="erbicho.jpg" />
+          <img id="lloron" src="laminelloron.jpeg" />
+          <img id="churrumbel" src="images.jpeg" />
+           
+     
+        </a-assets>
+        <a-sky src="#fons"></a-sky>
+        <a-plane position="0 0 0" rotation="-90 0 0" width="1000" height="1000" src="#texturaterra"></a-plane>
+        <a-plane position="-8 4 -8" rotation="0 0 0" width="8" height="2"  src="#guernica"
+        animation="property: position; to: -1 4 -30; dur: 5000; dir: alternate; loop: true"> </a-plane>
+        <a-box position="-4 3 0" rotation="0 0 50"  src="#cara" depth="1" height="1" width="1"  animation="property: rotation; to: 0 360 0; dur: 4000; loop: true"></a-box>
+        <a-dodecahedron id="esmou" position="8 2 -6" rotation="0 30 0" radius="3" src="#bicicletes"></a-dodecahedron>
+        <a-cylinder position ="15 3 -6" rotation="0 90 90" radius="3" src="#bicho" id="esmou2"></a-cylinder>
+          <a-cylinder position ="-10 3 -6" rotation="0 90 90" radius="3" src="#lloron" id="esmou2"></a-cylinder>
+        <a-plane position="-1 4 -8" rotation="0 0 0" width="8" height="2"  src="#churrumbel"
+        animation="property: position; to: 15 4 -15; dur: 5000; dir: alternate; loop: true"> </a-plane>
+        </a-scene>
+        
+
+
+           <script>
+          let unobjecte = document.querySelector("#esmou");
+       
+          unobjecte.addEventListener("click", () => {            
+            unobjecte.setAttribute("animation", {
+              property: "position",
+              to: "8 40 -6",
+              dur: 10000,
+              dir: "alternate",
+              loop: true
+            });
+          });
+        </script>
+         <script>
+          let unobjecte2 = document.querySelector("#esmou2");
+       
+          unobjecte2.addEventListener("click", () => {            
+            unobjecte2.setAttribute("animation", {
+              property: "rotation",
+              to: "0 360 0",
+              dur: 3000,
+              dir: "alternate",
+              loop: true
+            });
+          });
+        </script>
+
+  </body>
+</html>
